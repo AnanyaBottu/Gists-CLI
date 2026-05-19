@@ -52,7 +52,7 @@ gist create --file package.json --lang json --user john_doe
 ```
 
 ### 2. List Gists
-View all created gists in your terminal. This command displays beautifully formatted cards with the gist details and a preview of the content.
+Launch an interactive terminal UI to browse all your saved gists. It features a dual-panel layout where you can select a gist on the left and view its syntax-highlighted content on the right. Use the `tab` key to switch between panels.
 ```bash
 gist list
 ```
@@ -84,7 +84,10 @@ gist delete -i <gist_id>
 - [Commander.js](https://github.com/tj/commander.js) - Command-line interface framework.
 - [Convex](https://www.convex.dev/) - Reactive backend database.
 - [Inquirer.js](https://github.com/SBoudrias/Inquirer.js) - Interactive CLI prompts.
+- [Blessed](https://github.com/chjj/blessed) - Terminal interface library for the interactive list view.
+- [cli-highlight](https://github.com/felixfbecker/cli-highlight) - Syntax highlighting in the terminal.
 - [Boxen](https://github.com/sindresorhus/boxen) & [Chalk](https://github.com/chalk/chalk) - Terminal styling.
+- [dotenv](https://github.com/motdotla/dotenv) - Loading environment variables from a `.env.local` file.
 
 ## License
 
