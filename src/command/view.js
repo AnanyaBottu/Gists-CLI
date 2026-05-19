@@ -1,6 +1,7 @@
 import client from "../lib/convex.js";
 import boxen from "boxen";
 import chalk from "chalk";
+import { highlight } from "cli-highlight";
 
 export function viewCommand(program) {
   program
@@ -18,7 +19,7 @@ export function viewCommand(program) {
              "\nFile: " + chalk.yellow(result.fileName) +
              "\nLanguage: " + chalk.magenta(result.language) +
              "\nCreated: " + new Date(result.createdAt).toLocaleDateString() +
-             "\nContent:\n" + result.content.slice(0, 200);
+             "\nContent:\n" + highlighted.slice(0,600);
             console.log(
                 boxen(card.slice(0,400),{padding:1})
             );  

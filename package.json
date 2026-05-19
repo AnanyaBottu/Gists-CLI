@@ -12,6 +12,7 @@
   "type": "module",
   "bin": "src/index.js",
   "dependencies": {
+    "blessed": "^0.1.81",
     "boxen": "^8.0.1",
     "chalk": "^5.6.2",
     "cli-highlight": "^2.1.11",
