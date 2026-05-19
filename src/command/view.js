@@ -8,6 +8,12 @@ export function viewCommand(program) {
     .option("-i, --id <id>","Enter the id")
     .action(async (options) => {
         const result = await client.query("gists:getGistsById",{id: options.id});
+        let highlighted = result.content;
+        try {
+            highlighted = highlight(result.content, { language: result.language });
+        } catch(err) {
+            console.log(chalk.red("Error fetching gists: " + err.message));
+        }
         const card = chalk.bold.cyan(`${result.user}`) + 
              "\nFile: " + chalk.yellow(result.fileName) +
              "\nLanguage: " + chalk.magenta(result.language) +
